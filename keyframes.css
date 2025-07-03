@@ -1,5 +1,5 @@
 @keyframes anime1 {
-  from{
+  from {
     transform: translateX(-1000px);
   }
   to {
@@ -7,20 +7,45 @@
   }
 }
 
-
-
-
-@keyframes anime2{
-
-    from{
-
-        
-        transform: translateY(100vh) scale(0);
-
-    }
-to{transform: translateY(-10vh) scale(1);
-
-
+@keyframes anime2 {
+  from {
+    transform: translateY(100vh) scale(0);
+  }
+  to {
+    transform: translateY(-10vh) scale(1);
+  }
 }
 
+@keyframes moverSombra {
+  0% {
+    /* offset-x | offset-y | blur-radius | color */
+    filter: drop-shadow(30px 20px 20px rgba(45, 127, 156, 0.5));
+    transform: translateY(0); /* A imagem em si não se move, ou move um pouco */
+  }
+  25% {
+    filter: drop-shadow(40px 16px 20px rgba(45, 127, 156, 0.5));
+    transform: translateY(-5px); /* Desloca a imagem um pouco para cima */
+  }
+  50% {
+    filter: drop-shadow(-30px 32px 20px rgba(45, 127, 156, 0.5));
+    transform: translateY(0); /* Volta a imagem para a posição original */
+  }
+  75% {
+    filter: drop-shadow(-35px 0px 20px rgba(45, 127, 156, 0.5));
+    transform: translateY(5px); /* Desloca a imagem um pouco para baixo */
+  }
+  100% {
+    filter: drop-shadow(20px 20px 20px rgba(57, 139, 146, 0.4));
+    transform: translateY(0); /* Volta ao ponto inicial */
+  }
+}
+
+@keyframes animeMao {
+  from {
+    transform: translateY(50px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
